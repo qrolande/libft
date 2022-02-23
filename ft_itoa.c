@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: qrolande <qrolande@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/03 16:50:05 by qrolande          #+#    #+#             */
+/*   Updated: 2022/01/03 16:56:29 by qrolande         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_length(long nbr)
@@ -29,14 +41,14 @@ static char	*ft_printnbr(long nbr, char *res)
 
 char	*ft_itoa(int n)
 {
-	 long	nbr;
-	 int	len;
-	 char	*res;
+	long	nbr;
+	int		len;
+	char	*res;
 
-	 nbr = n;
-	 len = ft_length(nbr);
-	 res = (char *)malloc(sizeof(char) * (len + 1));
-	 if (res == NULL)
+	nbr = n;
+	len = ft_length(nbr);
+	res = (char *)malloc(sizeof(char) * (len + 1));
+	if (res == NULL)
 		return (NULL);
 	res[len--] = '\0';
 	ft_printnbr(nbr, res);
